@@ -1,0 +1,51 @@
+﻿@page "/"
+@inject NavigationManager _nav
+<PageTitle>Home</PageTitle>
+
+<MudStack Row="true" AlignItems="AlignItems.Start" StretchItems="StretchItems.All">
+<MudPaper Style="margin-right: 5vw; max-width: 640px; height: 100vh">
+<br />
+
+<div style="margin-left: 2vw; margin-right: 5vw;">
+    <MudText Typo="Typo.h4" GutterBottom="true">Leanne Alsatie</MudText>
+    <MudText>Computer Science Undergraduate Student</MudText>
+
+    <br />
+    <br />
+    <MudText Typo="Typo.h5" GutterBottom="true">About Me</MudText>
+    <br />
+    <MudText Typo="Typo.body2">
+    I'm interested in many aspects of computer science, from video game development to cybersecurity. I have experience working in software engineering, and I'm interested in positions that allow me to incorporate my cybersecurity skills into developing secure software.
+    <br />
+    <br />
+    As an undergraduate research assistant, I am part of a development team working on building collaborative games. Our games have mechanics that are research-informed with the intention of promoting good teamwork skills among players, allowing us to uncover new findings in the area of video games as educational tools.
+
+    <br />
+    <br />
+
+    I also work as a teaching assistant, leading my school's class on iOS development in Swift.
+    </MudText>
+
+    <br />
+    <MudText Typo="Typo.h6" GutterBottom="true">Resume</MudText>
+    <MudText Typo="Typo.body2">
+        <MudButton @onclick="NavigateToResumePage" Typo="Typo.body2" Color="Color.Primary">Click me! </MudButton>
+    </MudText>
+</div>
+
+    </MudPaper>
+
+<MudPaper style="margin-left: 5vw; max-width: 64px">
+<MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Primary" aria-label="github" Href="https://github.com/lea0101" Size="Size.Large"/>
+    <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn"
+    Color="Color.Secondary" aria-label="linkedin" Href="https://www.linkedin.com/in/leannealsatie" Size="Size.Large"/>
+</MudPaper>
+</MudStack>
+@code
+{
+    private void NavigateToResumePage()
+    {
+        _nav.NavigateTo("/resume");
+    }
+}
+

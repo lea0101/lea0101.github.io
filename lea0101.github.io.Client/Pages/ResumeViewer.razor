@@ -1,0 +1,17 @@
+@page "/resume"
+@inject NavigationManager _nav
+<MudAppBar Elevation="1">
+<MudIconButton Icon="@Icons.Material.Filled.Home" Color="Color.Primary" @onclick="NavigateHome"/>
+</MudAppBar>
+@*
+<iframe src="/files/Resume.pdf" width="100%" height="100vh"></iframe>
+*@
+<embed src="files/Resume.pdf" type="application/pdf" width="100%" height="900px" />
+
+@code
+{
+     private void NavigateHome()
+    {
+        _nav.NavigateTo("/");
+    }
+}
