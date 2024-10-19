@@ -15,7 +15,7 @@ jobs:
       - name: Publish .NET Core Project
         run: dotnet publish lea0101.github.io.csproj -c Release -o release --nologo
       - name: Commit wwwroot to Github Pages
-        uses: lea0101/github-pages-deploy-actions@3.7.1
+        uses: JamesIves/github-pages-deploy-actions@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
